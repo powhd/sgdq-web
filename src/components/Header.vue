@@ -2,7 +2,7 @@
   <!-- 头部整体盒子 -->
   <div id="header" class="container-fuild">
     <!-- 头部顶部 -->
-    <div class="header-top container-fuild hidden-xs">
+    <!-- <div class="header-top container-fuild hidden-xs">
       <div class="container">
         <div class="server pull-left">
           <span class="glyphicon glyphicon-earphone"></span>888-888-888
@@ -14,12 +14,12 @@
           <span class="glyphicon glyphicon-hand-left"></span>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- 电脑导航 -->
     <div class="header-nav container hidden-xs">
       <!-- 导航logo -->
       <div class="header-nav-logo">
-        <img src="@/assets/img/logo_black.png">
+        <img src="@/assets/img/logo.png">
       </div>
       <!-- 导航内容 -->
       <ul class="header-nav-wrapper">
@@ -45,7 +45,7 @@
     <!-- 手机导航 -->
     <div class="header-nav-m container-fuild visible-xs">
       <div class="header-nav-m-logo">
-        <img class="center-block" src="@/assets/img/logo_black.png" alt="logo">
+        <img class="center-block" src="@/assets/img/logo.png" alt="logo">
       </div>
       <!-- 导航栏 -->
       <div class="header-nav-m-menu text-center">
@@ -106,26 +106,26 @@ export default {
             }
           ]
         },
-        {
-          name: "相关服务",
-          path: "/service",
-          children: []
-        },
-        {
-          name: "新闻动态",
-          path: "/newsinformation",
-          children: []
-        },
+        // {
+        //   name: "相关服务",
+        //   path: "/service",
+        //   children: []
+        // },
+        // {
+        //   name: "新闻动态",
+        //   path: "/newsinformation",
+        //   children: []
+        // },
         {
           name: "公司介绍",
           path: "/companyintroduction",
           children: []
         },
-        {
-          name: "工作机会",
-          path: "/jobchance",
-          children: []
-        },
+        // {
+        //   name: "工作机会",
+        //   path: "/jobchance",
+        //   children: []
+        // },
         {
           name: "联系我们",
           path: "/contactus",
@@ -161,7 +161,7 @@ export default {
   color: #fff;
   font-size: 12px;
   line-height: 50px;
-  background: #474747;
+  background: #4096ff;
 }
 /* 顶部的图标 */
 #header .header-top span {
@@ -180,8 +180,8 @@ export default {
 }
 /* 导航栏logo图片 */
 #header .header-nav .header-nav-logo img {
-  width: 95px;
-  height: 45px;
+  width: 150px;
+  height: 55px;
   position: absolute;
   top: 0;
   left: 0;
@@ -291,8 +291,8 @@ export default {
   }
   /* 导航栏logo图片 */
   #header .header-nav-m .header-nav-m-logo img {
-    width: 95px;
-    height: 45px;
+    width: 115px;
+    height: 47px;
     position: absolute;
     top: 0;
     left: 0;
@@ -306,7 +306,7 @@ export default {
     height: 50px;
     font-size: 20px;
     line-height: 50px;
-    background: #474747;
+    background: #4096ff;
     position: relative;
   }
   /* 导航栏 菜单图标 */
@@ -327,7 +327,7 @@ export default {
     top: 50px;
     left: 0;
     width: 100%;
-    background: #474747;
+    background: #4096ff;
     z-index: 9999999;
   }
   /* 导航栏 每个导航 */

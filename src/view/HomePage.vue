@@ -7,10 +7,10 @@
           <div class="swiper-slide" v-for="(item,index) in swiperList" :key="index">
             <img class="swiper-lazy" :data-src="item.img" alt="轮播图">
             <div class="swiper-lazy-preloader"></div>
-            <div class="swiper-slide-title">
+            <!-- <div class="swiper-slide-title">
                 <h1>{{item.title}}</h1>
                 <p>{{item.content}}</p>
-            </div>
+            </div> -->
           </div>
         </div>
         <!-- 如果需要分页器 -->
@@ -56,10 +56,10 @@
         </div>
       </div>
     </div>
-    <!-- 客户评价 -->
+    <!-- 公司重点项目Company Key Projects -->
     <div id="customer" class="container-fuild">
       <div class="container customer-container">
-        <p class="customer-title text-center">客户评价</p>
+        <p class="customer-title text-center">公司重点项目Company Key Projects</p>
         <div class="swiper-container customer-swiper hidden-xs">
           <div class="swiper-wrapper">
             <div
@@ -143,7 +143,7 @@ export default {
     return {
       swiperList: [
         {
-          img: require("@/assets/img/banner1.png"),
+          img: require("@/assets/img/banner1.jpg"),
           path: "",
           title: '您身边的IT专家1',
           content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
@@ -154,103 +154,46 @@ export default {
           title: '您身边的IT专家2',
           content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
         },
-        {
-          img: require("@/assets/img/banner1.png"),
-          path: "",
-          title: '您身边的IT专家3',
-          content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
-        },
-        {
-          img: require("@/assets/img/banner2.jpg"),
-          path: "",
-          title: '您身边的IT专家4',
-          content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
-        }
+        // {
+        //   img: require("@/assets/img/banner3.jpg"),
+        //   path: "",
+        //   title: '您身边的IT专家3',
+        //   content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
+        // },
+        // {
+        //   img: require("@/assets/img/banner2.jpg"),
+        //   path: "",
+        //   title: '您身边的IT专家4',
+        //   content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
+        // }
       ],
       customerList: [
         {
-          logo: require("@/assets/img/logo_hp.png"),
+          logo: require("@/assets/img/case1.png"),
           title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+            "宁波财富中心 Ningbo Wealth Center",
+          // content:
+          //   ""
         },
         {
-          logo: require("@/assets/img/logo_kk.png"),
-          title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+          logo: require("@/assets/img/case2.png"),
+          title:"宁波国际会展中心 Ningbo International Convention and Exhibition Center",
           content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+            ""
         },
         {
-          logo: require("@/assets/img/logo_toyota.png"),
+          logo: require("@/assets/img/case3.png"),
           title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+            "宁波中心 Ningbo Center",
           content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+            ""
         },
         {
-          logo: require("@/assets/img/logo_kk.png"),
+          logo: require("@/assets/img/case4.png"),
           title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
+            "宁波儿童公园 Ningbo Children's Park",
           content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-        },
-        {
-          logo: require("@/assets/img/logo_hp.png"),
-          title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-        },
-        {
-          logo: require("@/assets/img/logo_toyota.png"),
-          title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-        },
-        {
-          logo: require("@/assets/img/logo_kk.png"),
-          title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-        },
-        {
-          logo: require("@/assets/img/logo_hp.png"),
-          title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-        },
-        {
-          logo: require("@/assets/img/logo_toyota.png"),
-          title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-        },
-        {
-          logo: require("@/assets/img/logo_hp.png"),
-          title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-        },
-        {
-          logo: require("@/assets/img/logo_kk.png"),
-          title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
-        },
-        {
-          logo: require("@/assets/img/logo_hp.png"),
-          title:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。",
-          content:
-            "您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。"
+            ""
         }
       ],
       serverList: [
@@ -309,6 +252,7 @@ export default {
     new Swiper(".customer-swiper", {
       loop: true, // 循环模式选项
       slidesPerView: 3,
+      spaceBetween: 10,
       //自动播放
       autoplay: {
         delay: 3000,
@@ -431,37 +375,69 @@ export default {
   background-size: 100% 100%;
 }
 
-/* 客户评价 */
+/* 公司重点项目Company Key Projects */
 #customer {
-  padding: 50px 0;
+  padding: 80px 0;
   box-sizing: border-box;
-  background: #efefef;
-  transition: all ease 0.6s;
+  background: #f8f9fa;
+  /* transition: all ease 0.6s; */
 }
 #customer .customer-title {
-  font-size: 30px;
-  color: rgb(102, 102, 102);
-  margin: 0 0 30px;
+  font-size: 36px;
+  color: rgb(51, 51, 51);
+  margin: 0 0 60px;
+  font-weight: 600;
 }
 #customer .customer-block {
   background: #fff;
-  padding: 30px;
+  padding: 50px 30px;
+  /* margin: 0 5px; */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+#customer .customer-block:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+#customer .customer-logo {
+  margin-bottom: 30px;
 }
 #customer .customer-logo img {
-  width: 94px;
-  height: 94px;
-  border: 1px solid #ccc;
+  width: 220px;
+  height: 220px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+#customer .customer-block:hover .customer-logo img {
+  border-color: #2288ff;
+}
+#customer .customer-yh {
+  margin-bottom: 20px;
 }
 #customer .customer-yh img {
-  width: 34px;
-  height: 34px;
+  width: 48px;
+  height: 48px;
+  opacity: 0.6;
 }
 #customer .customer-content1 {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #0ce9f1;
+  padding-bottom: 25px;
+  border-bottom: 2px solid #2288ff;
+  margin-bottom: 25px;
+}
+#customer .customer-content1 small {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666;
 }
 #customer .customer-content2 {
-  padding-top: 20px;
+  font-size: 25px;
+  color: #333;
+  font-weight: 600;
+  /* line-height: 1.6; */
 }
 /* 为什么选择我们 */
 #whyChooseUs {
@@ -538,12 +514,12 @@ export default {
     background: #fff;
   }
   #customer .customer-title {
-    font-size: 16px;
+    font-size: 22px;
     font-weight: bold;
   }
   #customer .customer-logo img {
-    width: 48px;
-    height: 48px;
+    width: 250px;
+    height: 250px;
   }
   #customer .customer-block {
     padding: 30px;
