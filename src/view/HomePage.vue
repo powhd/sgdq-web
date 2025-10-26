@@ -22,7 +22,7 @@
       </div>
     </div>
     <!-- 大数据管理系统 -->
-    <div id="bigData" class="container-fuild">
+    <!-- <div id="bigData" class="container-fuild">
       <div class="row bigData-container">
         <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
           <img class="img-responsive" src="@/assets/img/img1.png" alt="大数据管理系统">
@@ -38,9 +38,9 @@
           <a href="#" class="btn btn-lg btn-block btn-info">联系我们</a>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- 您身边的IT专家 -->
-    <div id="contactUs" class="container-fuild text-center">
+    <!-- <div id="contactUs" class="container-fuild text-center">
       <div class="container contactUs-container wow slideInUp">
         <h1>您身边的IT专家</h1>
         <h3>7x24小时提供出色的IT服务</h3>
@@ -55,7 +55,7 @@
           <span></span>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- 公司重点项目Company Key Projects -->
     <div id="customer" class="container-fuild">
       <div class="container customer-container">

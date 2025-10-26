@@ -33,62 +33,69 @@
 
       <!-- 资质认证 -->
       <div class="section">
-        <h2 class="section-title">资质认证</h2>
+        <h2 class="section-title">资质认证 Qualification Certification</h2>
         <div class="certification-list">
-          <div class="cert-item" v-for="cert in certifications" :key="cert">
-            ✓ {{ cert }}
+          <div class="cert-item" v-for="cert in certifications" :key="cert.name">
+            {{ cert.name }}
+            <div class="cert-name-en" style="font-size: 12px; margin-top: 5px;">{{ cert.nameEn }}</div>
           </div>
         </div>
       </div>
 
       <!-- 主要产品 -->
       <div class="section">
-        <h2 class="section-title">主要产品</h2>
+        <h2 class="section-title">主要产品 Main Products</h2>
         <div class="products-grid">
           <div class="product-item" v-for="product in products" :key="product">
-            {{ product }}
+            {{ product.name }}
+            <div class="product-name-en" style="font-size: 12px; margin-top: 5px;">{{ product.nameEn || ''}}</div>
           </div>
         </div>
       </div>
 
       <!-- 应用领域 -->
       <div class="section">
-        <h2 class="section-title">应用领域</h2>
+        <h2 class="section-title">应用领域 Application Areas</h2>
         <div class="intro-grid">
           <div class="card" v-for="field in applicationFields" :key="field">
-            <h3>📍 {{ field }}</h3>
+            <h3>📍 {{ field.name }}</h3>
+            <div class="field-name-en" style="font-size: 16px; margin-top: 5px;">{{ field.nameEn || ''}}</div>
           </div>
         </div>
       </div>
 
       <!-- 合作伙伴 -->
-      <div class="section">
+      <!-- <div class="section">
         <h2 class="section-title">合作伙伴</h2>
         <div class="partners">
           <div class="partner-badge" v-for="partner in partners" :key="partner">
             {{ partner }}
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- 发展历程 -->
       <div class="section">
-        <h2 class="section-title">发展历程</h2>
+        <h2 class="section-title">发展历程 Development History</h2>
         <div class="timeline">
           <div class="timeline-item" v-for="milestone in milestones" :key="milestone.year">
             <h3>{{ milestone.year }}</h3>
-            <p>{{ milestone.event }}</p>
+            <p>{{ milestone.event }} {{ milestone.nameEn || ''}}</p>
+            <!-- <div class="milestone-name-en" style="font-size: 12px; margin-top: 5px;"></div> -->
           </div>
         </div>
       </div>
 
       <!-- 企业理念 -->
       <div class="section">
-        <h2 class="section-title">企业理念</h2>
+        <h2 class="section-title">企业理念 Corporate Philosophy</h2>
         <div class="card">
-          <h3>🌟 品质方针</h3>
+          <h3>🌟 品质方针 Quality Policy</h3>
           <p class="philosophy-text">
             {{ company.philosophy }}
+          </p>
+          <p class="philosophy-text" style="margin-top: 5px;">
+            {{ company.philosophyEn}}
           </p>
         </div>
       </div>
@@ -126,67 +133,182 @@ export default {
         philosophy: "满足顾客、持续改进、开拓卓越、追求卓越",
         philosophyEn: 'To meet customers, continuously improve, expand, and pursue excellence.',
       },
-      certifications: [
-        "ISO9001 质量管理体系国际认证",
-        "ISO14001 环境管理体系认证",
-        "OHSA S18001 职业健康管理体系认证",
-        "ISO10012 测量管理体系认证",
-        "中国国家质量认证中心 CQC 认证",
+      certifications: [{
+        name: "ISO9001 质量管理体系国际认证",
+        nameEn: "ISO9001 Quality Management System International Certification",
+      },
+      {
+        name: "ISO14001 环境管理体系认证",
+        nameEn: "ISO14001 Environment Management System International Certification",
+      },
+      {
+        name: "OHSA S18001 职业健康管理体系认证",
+        nameEn: "OHSA S18001 Occupational Health and Safety Management System International Certification",
+      },  
+      {
+        name: "ISO10012 测量管理体系认证",
+        nameEn: "ISO10012 Measurement Management System International Certification",
+      },
+      {
+        name: "中国国家质量认证中心 CQC 认证",
+        nameEn: "China National Quality Certification Center CQC Certification",
+      },
       ],
       products: [
-        "高压中置柜",
-        "高压开关柜",
-        "高压环网柜",
-        "MD190",
-        "MDmax",
-        "8PT",
-        "MLS-V",
-        "EdisonLSNs",
-        "BlokSeT5000",
-        "Prisma P",
-        "CGZ160",
-        "GCS",
-        "GCK",
-        "GGD",
-        "PCL系列低压配电柜",
-        "动力箱",
-        "分支箱",
-        "电表箱",
+        {
+          name: "高压中置柜",
+          nameEn: "High Voltage Midpoint Cabinet",
+        },
+        {
+          name: "高压开关柜",
+          nameEn: "High Voltage Switchgear",
+        },
+        {
+          name: "高压环网柜",
+          nameEn: "High Voltage Ring Cabinet",
+        },
+        {
+          name: "动力箱",
+          nameEn: "Power Box",
+        },
+    
+        {
+          name: "MDmax",
+        },
+        {
+          name: "8PT",
+        },
+        {
+          name: "MLS-V",
+        },
+        {
+          name: "EdisonLSNs",
+        },
+        {
+          name: "BlokSeT5000",
+        },
+        {
+          name: "Prisma P",
+        },
+        {
+          name: "CGZ160",
+        },
+        {
+          name: "GCS",
+        },
+        {
+          name: "GCK",
+        },
+        {
+          name: "GGD",
+        },
+            {
+          name: "MD190",
+        },
+        // {
+        //   name: "PCL系列低压配电柜",
+        //   nameEn: "PCL Series Low Voltage Distribution Cabinet"
+        // },
+    
+        {
+          name: "分支箱",
+          nameEn: "Branch Box",
+        },
+        {
+          name: "电表箱",
+          nameEn: "Meter Box",
+        },
       ],
-      applicationFields: [
-        "电力",
-        "房产",
-        "交通",
-        "化工",
-        "冶金",
-        "纺织",
-        "轻纺",
-        "港口",
-        "钢铁",
-        "大型冶金",
-        "房地产",
-        "交通运输",
-        "化工行业",
-        "大型商场",
-        "轻纺织",
-        "港口",
-      ],
-      partners: [
-        "西门子",
-        "ABB",
-        "通用电气",
-        "施耐德",
-        "库柏（宁波）电器",
-        "常熟开关制造有限公司",
+      applicationFields: [{
+        name: "电力",
+        nameEn: "Power",
+      },
+      {
+        name: "房产",
+        nameEn: "Real Estate",
+      },
+      {
+        name: "交通",
+        nameEn: "Transportation",
+      },
+      {
+        name: "化工",
+        nameEn: "Chemistry",
+      },
+      {
+        name: "冶金",
+        nameEn: "Metallurgy",
+      },
+      {
+        name: "纺织",
+        nameEn: "Textiles",
+      },
+      {
+        name: "轻纺",
+        nameEn: "Light Textiles",
+      },
+      {
+        name: "港口",
+        nameEn: "Port",
+      },
+      {
+        name: "钢铁",
+        nameEn: "Iron",
+      },
+      {
+        name: "大型冶金",
+        nameEn: "Large Metallurgy",
+      },
+      {
+        name: "房地产",
+        nameEn: "Real Estate",
+      },
+      {
+        name: "交通运输",
+        nameEn: "Transportation and Logistic",
+      },
+      {
+        name: "化工行业",
+        nameEn: "Chemistry Industry",
+      },
+      {
+        name: "大型商场",
+        nameEn: "Large Shopping Centers",
+      },
+      {
+        name: "轻纺织",
+        nameEn: "Light Textiles",
+      },
+      {
+        name: "港口",
+        nameEn: "Port",
+      },
+      {
+        name: "钢铁",
+        nameEn: "Iron",
+      },
+        {
+          name: "施耐德",
+          nameEn: "Schneider",
+        },
+        {
+          name: "库柏（宁波）电器",
+          nameEn: "Libobao (Ningbo) Electrical Apparatus",
+        },
+        {
+          name: "常熟开关制造有限公司",
+          nameEn: "Consun Switchgear Manufacturing Co., Ltd.",
+        },
       ],
       milestones: [
-        { year: "1997年", event: "公司成立，开始专注电气成套领域" },
-        { year: "早期", event: "成为宁波首批获得机械部、电力部双认证企业" },
-        { year: "发展期", event: "通过ISO9001、ISO14001、OHSA等多项国际认证" },
+        { year: "1997年 Year", event: "公司成立，开始专注电气成套领域", nameEn: "Company Founded, Focused on Electrical Sets" },
+        { year: "早期 Early", event: "成为宁波首批获得机械部、电力部双认证企业", nameEn: "Become the First in Ningbo to Obtain Double Authentications from Machinery Department and Power Department" },
+        { year: "发展期 Development period", event: "通过ISO9001、ISO14001、OHSA等多项国际认证", nameEn: "Passed Multiple International Authentications Including ISO9001, ISO14001, OHSA" },
         {
-          year: "现在",
+          year: "现在 Now",
           event:
             "成为西门子、ABB、GE等国际品牌授权制造商，在宁波地区建立强大的品牌影响力",
+          nameEn: "Become International Brand Authorized Manufacturers in Ningbo, Establishing Strong Brand Influence",
         },
       ],
     };
@@ -370,7 +492,8 @@ body {
   text-align: center;
   color: #2a5298;
   font-weight: bold;
-  padding: 20px;
+  
+  /* padding: 20px; */
 }
 
 @keyframes fadeIn {

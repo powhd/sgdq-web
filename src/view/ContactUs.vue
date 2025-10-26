@@ -118,40 +118,18 @@
       <div class="map-section">
         <h3 class="section-title">地图位置 Location Map</h3>
         <div class="map-container">
-          <img v-if="mapImgUrl" :src="mapImgUrl" alt="高德静态地图" class="map-img" />
-          <div v-else class="map-placeholder">
-            <p class="map-text">地图加载中…</p>
-            <p class="map-subtext">请稍候或刷新页面</p>
-          </div>
+          <img :src="mapImgUrlPng" alt="高德静态地图" class="map-img" />
+        
         </div>
       </div>
 
-      <!-- Business Hours -->
-      <div class="business-hours">
-        <div class="hours-header">
-          <svg class="clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
-          <h3 class="hours-title">工作时间 Business Hours</h3>
-        </div>
-        <div class="hours-grid">
-          <div class="hours-item">
-            <p class="hours-label">工作日 Weekdays</p>
-            <p class="hours-value">周一至周五 9:00 - 18:00<br>Mon - Fri 9:00 - 18:00</p>
-          </div>
-          <div class="hours-item">
-            <p class="hours-label">周末 Weekend</p>
-            <p class="hours-value">预约服务<br>By Appointment</p>
-          </div>
-        </div>
-      </div>
     </div>
 
   </div>
 </template>
 
 <script>
+import mapImgUrlPng from '@/assets/img/map.png'
 export default {
   name: 'ContactUs',
   data() {
@@ -165,27 +143,12 @@ export default {
       },
       amapKey: '7191478bbc8bab7ae33a48a43d4e0d45',
       address: '宁波国家高新区晶源路6号',
-      mapImgUrl: ''
+      mapImgUrlPng: mapImgUrlPng
     }
   },
   mounted() {
-    this.fetchCoordsAndBuildMap()
   },
   methods: {
-    async fetchCoordsAndBuildMap() {
-      try {
-        const res = await fetch(`https://restapi.amap.com/v3/geocode/geo?address=${encodeURIComponent(this.address)}&key=${this.amapKey}`)
-        const data = await res.json()
-        const geo = data.geocodes && data.geocodes[0]
-        if (geo && geo.location) {
-          const [lng, lat] = geo.location.split(',')
-          const size = '750*400'
-          this.mapImgUrl = `https://restapi.amap.com/v3/staticmap?location=${lng},${lat}&zoom=16&size=${size}&markers=mid,0xFF0000,A:${lng},${lat}&key=${this.amapKey}`
-        }
-      } catch (e) {
-        console.error('AMap geocode failed', e)
-      }
-    }
   }
 }
 </script>

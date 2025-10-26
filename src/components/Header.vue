@@ -32,6 +32,7 @@
           <router-link :to="item.path">
             {{item.name}}
             <span v-if="item.children.length>0" class="glyphicon glyphicon-menu-down"></span>
+            <span class="nav-subtitle">{{item.nameEn}}</span>
             <i class="underline"></i>
           </router-link>
           <dl v-if="item.children.length>0">
@@ -89,11 +90,13 @@ export default {
       navList: [
         {
           name: "首页",
+          nameEn: 'Home',
           path: "/",
           children: []
         },
         {
-          name: "软件产品",
+          name: "产品信息",
+          nameEn: 'Product Info',
           path: "/software",
           children: [
             {
@@ -118,6 +121,7 @@ export default {
         // },
         {
           name: "公司介绍",
+          nameEn: 'Company Introduction',
           path: "/companyintroduction",
           children: []
         },
@@ -128,6 +132,7 @@ export default {
         // },
         {
           name: "联系我们",
+          nameEn: 'Contact Us',
           path: "/contactus",
           children: []
         }
