@@ -76,7 +76,7 @@
           </div>
 
           <!-- Website -->
-          <div class="contact-card">
+          <!-- <div class="contact-card">
             <div class="card-content">
               <div class="icon-wrapper icon-cyan">
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -92,7 +92,7 @@
                 </a>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- Email -->
           <div class="contact-card">
