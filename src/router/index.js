@@ -30,10 +30,10 @@ export default new Router({
             title: '产品信息'
           },
           children: [
-            // {
-            //   path: '/productInfo',
-            //   redirect: '/productInfo/sivacon'
-            // },
+            {
+              path: '/productInfo',
+              redirect: '/productInfo/sivacon'
+            },
             {
               path: '/productInfo/sivacon',
               name: 'SIVACON 8PT',
