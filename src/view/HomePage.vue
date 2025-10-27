@@ -105,8 +105,8 @@
     <div id="whyChooseUs" class="conatiner-fuild">
       <div class="container">
         <div class="whyChooseUs-title text-center">
-          <p>为什么选择我们的服务</p>
-          <p>THE REASON TO CHOOSING US</p>
+          <p>核心价值观</p>
+          <p>Core Values</p>
         </div>
         <div class="row">
           <div
@@ -199,23 +199,23 @@ export default {
       serverList: [
         {
           logo: require("@/assets/img/tel.png"),
-          title: "核心优势1",
-          content: "<p>由专业客服提供人工服务</p>负责疑难问题和故障受理"
+          title: "满足顾客",
+          // content: "<p>由专业客服提供人工服务</p>负责疑难问题和故障受理"
         },
         {
           logo: require("@/assets/img/computer.png"),
-          title: "核心优势2",
-          content: "<p>利用远程视频工具，提供协助</p>帮助客户进行调试、解决故障"
+          title: "持续改进",
+          // content: "<p>利用远程视频工具，提供协助</p>帮助客户进行调试、解决故障"
         },
         {
           logo: require("@/assets/img/qq.png"),
-          title: "核心优势3",
-          content: "<p>利用企业QQ提供在线解答</p>帮助企业快速准确解决问题和故障"
+          title: "开创名牌",
+          // content: "<p>利用企业QQ提供在线解答</p>帮助企业快速准确解决问题和故障"
         },
         {
           logo: require("@/assets/img/skill.png"),
-          title: "核心优势4",
-          content: "<p>由技术支持工程师，负责问题解答</p>需求受理及故障受理"
+          title: "追求卓越",
+          // content: "<p>由技术支持工程师，负责问题解答</p>需求受理及故障受理"
         }
       ]
     };

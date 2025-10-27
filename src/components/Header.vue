@@ -35,7 +35,7 @@
             <span class="nav-subtitle">{{item.nameEn}}</span>
             <i class="underline"></i>
           </router-link>
-          <dl v-if="item.children.length>0">
+          <dl v-if="item.children.length>0" class="children-dl">
             <dt v-for="(i,n) in item.children" :key="n">
               <router-link :to="i.path">{{i.name}}</router-link>
             </dt>
@@ -336,6 +336,10 @@ export default {
   cursor: pointer;
   background: #ccc;
 }
+.children-dl > dt > a{
+  width: 100%;
+  display: block;
+}
 @media screen and (max-width: 997px) {
   #header .header-nav-m {
     position: relative;
@@ -397,8 +401,9 @@ export default {
     color: #fff;
     font-size: 15px;
     font-weight: bold;
-    padding: 15px 0;
+    padding: 15px 20px;
     position: relative;
+    display: block;
   }
   /* 导航栏 每个导航下面的 a 链接的右侧小三角 */
   #header .header-nav .header-nav-wrapper > li > a > span {
