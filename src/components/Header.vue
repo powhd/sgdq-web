@@ -97,15 +97,66 @@ export default {
         {
           name: "产品信息",
           nameEn: 'Product Info',
-          path: "/software",
+          path: "/productInfo",
           children: [
             {
-              name: "智能小镇管理系统",
-              path: "/software/smartTown"
+              name: "SIVACON 8PT",
+              path: "/productInfo/sivacon"
             },
             {
-              name: "大数据管理系统",
-              path: "/software/bigData"
+              name: "MDmax",
+              path: "/productInfo/mdmax"
+            },
+            {
+              name: "GCS",
+              path: "/productInfo/gcs"
+            },{
+              name: "GCK",
+              path: "/productInfo/gck"
+            },
+            {
+              name: "GGD",
+              path: "/productInfo/ggd"
+            },
+            {
+              name: "KYN28A-24",
+              path: "/productInfo/kyn28a-24"
+            },
+            {
+              name: "KYN28A-12",
+              path: "/productInfo/kyn28a-12"
+            },
+            {
+              name: "XGN66-12",
+              path: "/productInfo/xgn66-12"
+            },
+            {
+              name: "HXGN15-12",
+              path: "/productInfo/hxgn15-12"
+            },
+            {
+              name: "YBW-12",
+              path: "/productInfo/ybw-12"
+            },
+            {
+              name: "GSM-I",
+              path: "/productInfo/gsm-i"
+            },
+            {
+              name: "GWF",
+              path: "/productInfo/gwf"
+            },
+            {
+              name: "WSJ",
+              path: "/productInfo/wsj"
+            },
+            {
+              name: "DJK",
+              path: "/productInfo/djk"
+            },
+            {
+              name: "XL-21",
+              path: "/productInfo/xl-21"
             }
           ]
         },
