@@ -54,10 +54,10 @@ export default {
       },
       sections: {
         intro: {
-          titleCn: '概述',
-          titleEn: 'Overview',
+          titleCn: '产品介绍',
+          titleEn: 'Product Introduction',
           paragraphsCn: [
-            `待补充`
+            `KYN28A-24 型户内交流金属铠装中置移开式开关设备(以下简称开关设备)，系 24kV 三相交流 50Hz单母线及单母线分段系统的成套装置。主要用于发电厂、中小型发电机送电、工矿企事业配电以及电业系统的二次变电所的受电、送电、极大型高压电动机启动等。实行控制保护检测之用。本开关柜满足IEC62271、GB3906 等标准要求、具有防止带负荷推拉断路器手车，防止误分合断路器、防止接地开关处在闭合位置时关合断路器、防止误入带电隔室、防止在带电时误合接地开关的联锁功能，既可配用 ABB 公司的 VD4 真空断路器，也可配置 VS1 真空断路器、隔离手车、电压互感器手车等 实为一种性能优越的配电装置。`
           ],
           paragraphsEn: [
             `The KYN28A-24 indoor AC metal-clad withdrawable switchgear (hereinafter referred to as switchgear) is a complete set of

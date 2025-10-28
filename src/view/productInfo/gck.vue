@@ -79,8 +79,8 @@ export default {
       },
       sections: {
         intro: {
-          titleCn: '用途',
-          titleEn: 'Usage',
+          titleCn: '产品介绍',
+          titleEn: 'Product Introduction',
           paragraphsCn: [
             `GCK低压抽出式开关柜适用于三相交流50、60Hz，额定电压660V额定电流 4000A 及以下的三相四线制及三相五线制电力系统，作为接受电能和分配电能之用。广泛应用于发电厂、变电所、厂矿企业和高层建筑的动力配电中心和电动机控制中心 MCC。`
           ],

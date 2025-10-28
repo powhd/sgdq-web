@@ -1,0 +1,426 @@
+<template>
+  <div class="sivacon-container">
+    <div class="bg-towers"></div>
+    
+    <!-- 头部区域 -->
+    <header class="header">
+      <div class="title-section">
+        <h1 class="main-title">{{ product.name }}</h1>
+        <div class="subtitle-box">
+          <div class="subtitle-cn">{{ product.subtitleCn }}</div>
+          <div class="subtitle-en">{{ product.subtitleEn }}</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 内容区域 -->
+    <main class="content">
+      <!-- 产品简介部分 -->
+      <section class="section">
+        <h2 class="section-title-cn">{{ sections.intro.titleCn }}</h2>
+        <h2 class="section-title-en">{{ sections.intro.titleEn }}</h2>
+        <p 
+          v-for="(para, index) in sections.intro.paragraphsCn" 
+          :key="'cn-' + index"
+          class="section-text"
+        >
+          {{ para }}
+        </p>
+        <p 
+          v-for="(para, index) in sections.intro.paragraphsEn" 
+          :key="'en-' + index"
+          class="section-text"
+        >
+          {{ para }}
+        </p>
+      </section>
+
+      <!-- 模块化设计部分 -->
+      <section class="section">
+        <div class="modular-section">
+          <div class="text-content">
+            <h2 class="section-title-cn">{{ sections.modular.titleCn }}</h2>
+            <h2 class="section-title-en">{{ sections.modular.titleEn }}</h2>
+            <p 
+              v-for="(para, index) in sections.modular.paragraphsCn" 
+              :key="'mod-cn-' + index"
+              class="section-text"
+            >
+              {{ para }}
+            </p>
+            <p 
+              v-for="(para, index) in sections.modular.paragraphsEn" 
+              :key="'mod-en-' + index"
+              class="section-text"
+            >
+              {{ para }}
+            </p>
+          </div>
+          
+          <!-- 设备模拟图 -->
+          <div class="image-placeholder">
+            <img style="width: 100%;" src="@/assets/img/p12.png" alt="SIVACON 8PT">
+          </div>
+             <div class="image-placeholder">
+            <img style="width: 100%;" src="@/assets/img/p13.png" alt="SIVACON 8PT">
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'WSJ',
+  data() {
+    return {
+      product: {
+        name: 'WSJ',
+        subtitleCn: '户外低压无功综合自动补偿箱',
+        subtitleEn: 'Outdoor low voltage reactive power automatic compensation box'
+      },
+      sections: {
+        intro: {
+          titleCn: '产品介绍',
+          titleEn: 'Product Introduction',
+          paragraphsCn: [
+            `户外低压无功综合自动补偿箱适用于城镇及农村配电变压器低压侧配电装置，具有分配、控制电能、保护设备等功能;同时能实时监测、显示、记录配变电运行数据并实现数据的远方传输:实现低压无功自动补偿能有效改善供电质量，提高供电的可靠性，降低电网无功电能损耗，降低电网线损率。`,
+`户外低压无功综合自动补偿箱运行数据实现 GPRS 实时通信并能与原有的后台系统连接应用。`
+          ],
+          paragraphsEn: [
+            `SVS outdoor low voltage reactive power automatic compensation box suitable for urban and rural power distribution transformer low voltage side, Function of distribution, control power, protection equipment and so on . At the same time can be monitored in 
+real-time, display, record with operating data and realize remote data transmission, realize low voltage reactive power automatic compensation, can eﬀectively improve the quality of power supply, to provide the power supply reliability, reduce reactive power 
+loss, reduce power loss rate`,
+`SVS outdoor low voltage reactive power automatic compensation box running data to achieve with GPRS real-time 
+communication and can be linked to the original background system application`
+          ]
+        },
+        modular: {
+          titleCn: '型号含义',
+          titleEn: 'Meaning of Models',
+          paragraphsCn: [
+          ],
+          paragraphsEn: [
+          ]
+        },
+        structure: {
+          titleCn: '产品主要技术参数',
+          titleEn: 'Main Technical Data',
+          paragraphsCn: [
+"额定电压/Rated voltage (V): AC380、400",
+"额定频率/Rated frequency (Hz): 50、60",
+"额定绝缘电压/Rated insulation voltage (V): 660、1000",
+"额定电流/Rated current (A): 1250-1000",
+"母线额定短时耐受电流/Rated short-time withstand current of bus (kA): 35",
+"母线额定峰值耐受电流/Rated peak withstand current of bus (kA): 73.5",
+"工频耐压/Power frequency withstand voltage (V): 2500",
+"环境温度/Ambient operation temperature (℃): -40-50",
+"海拔高度/Altitude (m): ≤2000",
+"防护等级(A)/Degree of protection: IP34D"
+          ],
+          paragraphsEn: [
+          ]
+        }
+      }
+    }
+  },
+  methods: {
+    getSwitchCount(sectionNumber) {
+      // 第三个区域显示3个开关，前两个区域显示2个开关
+      return sectionNumber === 3 ? 3 : 2;
+    }
+  }
+}
+</script>
+
+<style scoped>
+* {
+  box-sizing: border-box;
+}
+
+.sivacon-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: linear-gradient(to bottom right, #e8f0f8 0%, #f5f8fb 100%);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.bg-towers {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><line x1="100" y1="0" x2="150" y2="600" stroke="%23ccc" stroke-width="2"/><line x1="200" y1="0" x2="250" y2="600" stroke="%23ccc" stroke-width="2"/><line x1="300" y1="0" x2="350" y2="600" stroke="%23ccc" stroke-width="2"/><line x1="400" y1="100" x2="450" y2="600" stroke="%23ccc" stroke-width="3"/><line x1="500" y1="50" x2="550" y2="600" stroke="%23ccc" stroke-width="2"/></svg>') no-repeat center;
+  background-size: cover;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+/* 头部样式 */
+.header {
+  position: relative;
+  z-index: 1;
+  padding: 40px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.title-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.main-title {
+  font-size: 25px;
+  font-weight: 600;
+  color: #1a2b4a;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.subtitle-box {
+  background: #f39c12;
+  padding: 12px 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.subtitle-cn {
+  font-size: 15px;
+  color: #000;
+  font-weight: 500;
+}
+
+.subtitle-en {
+  font-size: 15px;
+  color: #000;
+  font-weight: 400;
+}
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a2b4a;
+  letter-spacing: 3px;
+}
+
+.logo-cn {
+  font-size: 1.5rem;
+  color: #1a2b4a;
+}
+
+.auth-badge {
+  background: #0066b3;
+  color: white;
+  padding: 4px 12px;
+  font-size: 15px;
+  border-radius: 2px;
+}
+
+/* 内容区域 */
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.section {
+  background: white;
+  margin-bottom: 30px;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.section-title-cn {
+  font-size: 22px;
+  color: #0066b3;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.section-title-en {
+  font-size: 22px;
+  color: #0066b3;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.section-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* 模块化设计区域 */
+.modular-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.text-content {
+  /* 文本内容容器 */
+}
+
+/* 设备模拟图 */
+.image-placeholder {
+  width: 100%;
+  /* aspect-ratio: 3/4; */
+  background: linear-gradient(135deg, #e0e5ea 0%, #c8d0d8 100%);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cabinet-mock {
+  width: 80%;
+  height: 90%;
+  background: linear-gradient(to right, #d4d9de 0%, #e8eaed 50%, #d4d9de 100%);
+  border-radius: 8px;
+  box-shadow: 
+    inset -5px 0 10px rgba(0,0,0,0.1),
+    inset 5px 0 10px rgba(255,255,255,0.3);
+  position: relative;
+}
+
+.cabinet-section {
+  position: absolute;
+  width: 90%;
+  height: 30%;
+  left: 5%;
+  background: #f0f2f5;
+  border: 2px solid #b0b8c0;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.cabinet-section:nth-child(1) { 
+  top: 5%; 
+}
+
+.cabinet-section:nth-child(2) { 
+  top: 37%; 
+}
+
+.cabinet-section:nth-child(3) { 
+  top: 69%; 
+}
+
+.switch-indicator {
+  width: 40px;
+  height: 50px;
+  background: #2c5aa0;
+  border-radius: 3px;
+  position: relative;
+}
+
+.switch-indicator::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 40%;
+  background: #4a90e2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+}
+
+.control-lights {
+  display: flex;
+  gap: 8px;
+}
+
+.light {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #dc3545;
+  box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+}
+
+.light:nth-child(2) { 
+  background: #ffc107; 
+  box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+}
+
+.light:nth-child(3) { 
+  background: #28a745; 
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+/* 响应式设计 */
+@media (max-width: 968px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .modular-section {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    padding: 30px 15px 15px;
+  }
+
+  .section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  .logo-cn {
+    font-size: 1.2rem;
+  }
+
+  .section-title-cn {
+    font-size: 18px;
+  }
+
+  .section-title-en {
+    font-size: 18px;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .logo-section {
+    align-items: flex-start;
+  }
+}
+</style>
