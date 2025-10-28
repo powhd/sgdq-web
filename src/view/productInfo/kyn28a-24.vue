@@ -1,7 +1,7 @@
 <template>
   <div class="sivacon-container">
     <div class="bg-towers"></div>
-    
+
     <!-- 头部区域 -->
     <header class="header">
       <div class="title-section">
@@ -19,15 +19,15 @@
       <section class="section">
         <h2 class="section-title-cn">{{ sections.intro.titleCn }}</h2>
         <h2 class="section-title-en">{{ sections.intro.titleEn }}</h2>
-        <p 
-          v-for="(para, index) in sections.intro.paragraphsCn" 
+        <p
+          v-for="(para, index) in sections.intro.paragraphsCn"
           :key="'cn-' + index"
           class="section-text"
         >
           {{ para }}
         </p>
-        <p 
-          v-for="(para, index) in sections.intro.paragraphsEn" 
+        <p
+          v-for="(para, index) in sections.intro.paragraphsEn"
           :key="'en-' + index"
           class="section-text"
         >
@@ -57,26 +57,18 @@ export default {
           titleCn: '概述',
           titleEn: 'Overview',
           paragraphsCn: [
-            `KYN28A-24 型户茫 疼 税 金属铠遙 中糵 移开式开关设备（芵 芚 简諜 开
-关设备），籏 24kV 三相疼税 50Hz 单租线癲单租线分秖籏统的成眀遙
-糵。主要用于发电厂、中小型发电机送电、工矿企事业配电芵癲电业籏
-统的二次变电硵的受电、送电、极大型舊压电动机启动等。实行虱制保护、
-检测芠 用。本开关蜺 满足 IEC62271、GB3906 等标瘮 要求、牑 有腋
-止带负荷碡碈蛦路犀手车，腋止误分合蛦路犀、腋止碟地开关处在闭合
-痒糵时关合蛦路犀、腋止误茤带电鍫睅、腋止在带电时误合碟地开关的
-联锁功賍，蛯 可配用 ABB 茩 司的 VD4 筿 諽 蛦 路犀，也可配糵 VS1 筿
-諽蛦路犀、鍫諑手车、电压疸感犀手车等，实为一諕性賍芼耙的配电遙糵。`
+            `待补充`
           ],
           paragraphsEn: [
-            `The KYN28A-24 indoor AC metal-clad withdrawable switchgear (hereinafter referred to as switchgear) is a complete set of 
-power distribution devices of 24kV three-phase AC 50Hz single bus or single bus sectional system. The switchgear is mainly 
-used in power plants, small- and medium-sized power generators, industrial and mining enterprises, and secondary substations 
-of power system for power receiving, power transmission, and startup of large-sized high-voltage motor in order to implement 
-control, protection, and monitor. The switchgear complies with IEC62271 and GB3906 standards and comes out with a variety 
+            `The KYN28A-24 indoor AC metal-clad withdrawable switchgear (hereinafter referred to as switchgear) is a complete set of
+power distribution devices of 24kV three-phase AC 50Hz single bus or single bus sectional system. The switchgear is mainly
+used in power plants, small- and medium-sized power generators, industrial and mining enterprises, and secondary substations
+of power system for power receiving, power transmission, and startup of large-sized high-voltage motor in order to implement
+control, protection, and monitor. The switchgear complies with IEC62271 and GB3906 standards and comes out with a variety
 of protection functions, including preventing pulling or pushing circuit breaker handcart in load mode, preventing turning on/off
-the circuit breaker by mistake, preventing turning on the circuit breaker when the grounding switch is in ON position, preventing 
-entering the energized cubicle by mistake, and preventing turning on the interlock function of the grounding switch by mistake in 
-energized state. The switchgear can be used in conjunction with the VD4 circuit breaker of the ABB company, VSI circuit breaker, 
+the circuit breaker by mistake, preventing turning on the circuit breaker when the grounding switch is in ON position, preventing
+entering the energized cubicle by mistake, and preventing turning on the interlock function of the grounding switch by mistake in
+energized state. The switchgear can be used in conjunction with the VD4 circuit breaker of the ABB company, VSI circuit breaker,
 isolation handcart, and voltage transformer. It is really a high-performance power distribution device`
           ]
         },
@@ -268,7 +260,7 @@ isolation handcart, and voltage transformer. It is really a high-performance pow
   height: 90%;
   background: linear-gradient(to right, #d4d9de 0%, #e8eaed 50%, #d4d9de 100%);
   border-radius: 8px;
-  box-shadow: 
+  box-shadow:
     inset -5px 0 10px rgba(0,0,0,0.1),
     inset 5px 0 10px rgba(255,255,255,0.3);
   position: relative;
@@ -288,16 +280,16 @@ isolation handcart, and voltage transformer. It is really a high-performance pow
   padding: 10px;
 }
 
-.cabinet-section:nth-child(1) { 
-  top: 5%; 
+.cabinet-section:nth-child(1) {
+  top: 5%;
 }
 
-.cabinet-section:nth-child(2) { 
-  top: 37%; 
+.cabinet-section:nth-child(2) {
+  top: 37%;
 }
 
-.cabinet-section:nth-child(3) { 
-  top: 69%; 
+.cabinet-section:nth-child(3) {
+  top: 69%;
 }
 
 .switch-indicator {
@@ -333,13 +325,13 @@ isolation handcart, and voltage transformer. It is really a high-performance pow
   box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
 }
 
-.light:nth-child(2) { 
-  background: #ffc107; 
+.light:nth-child(2) {
+  background: #ffc107;
   box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
 }
 
-.light:nth-child(3) { 
-  background: #28a745; 
+.light:nth-child(3) {
+  background: #28a745;
   box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
 }
 
