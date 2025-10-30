@@ -26,6 +26,9 @@ export default {
                     path: '/productInfo/sivacon',
                     name: 'SIVACON 8PT'
                 },{
+                    path: '/productInfo/blokset5000',
+                    name: 'BlokSET 5000'
+                },{
                     path: '/productInfo/mdmax',
                     name: 'MDmax'
                 },{

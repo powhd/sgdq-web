@@ -7,10 +7,6 @@
           <div class="swiper-slide" v-for="(item,index) in swiperList" :key="index">
             <img class="swiper-lazy" :data-src="item.img" alt="轮播图">
             <div class="swiper-lazy-preloader"></div>
-            <!-- <div class="swiper-slide-title">
-                <h1>{{item.title}}</h1>
-                <p>{{item.content}}</p>
-            </div> -->
           </div>
         </div>
         <!-- 如果需要分页器 -->
@@ -246,7 +242,9 @@ export default {
       },
       // 延迟加载
       lazy: {
-        loadPrevNext: true
+        loadPrevNext: true,
+        loadPrevNextAmount: 1,
+        loadOnTransitionStart: true
       },
       observer: true, //修改swiper自己或子元素时，自动初始化swiper
       observeParents: true //修改swiper的父元素时，自动初始化swiper
@@ -299,6 +297,7 @@ export default {
 #swiper .banner-swiper .swiper-slide img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 #swiper .banner-swiper .swiper-slide{
   position: relative;
@@ -323,6 +322,41 @@ export default {
   font-size: 20px;
   margin-top: 1%;
   font-weight: 700;
+}
+/* 轮播图懒加载的骨架屏与模糊过渡 */
+#swiper .banner-swiper .swiper-slide {
+  background: #f5f7fa;
+  overflow: hidden;
+}
+#swiper .banner-swiper .swiper-slide .swiper-lazy {
+  opacity: 0;
+  transform: scale(1.02);
+  filter: blur(16px);
+  transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
+}
+#swiper .banner-swiper .swiper-slide .swiper-lazy.swiper-lazy-loaded {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+}
+#swiper .banner-swiper .swiper-slide .swiper-lazy-preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #f5f7fa 25%, #e9edf3 37%, #f5f7fa 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+#swiper .banner-swiper .swiper-slide .swiper-lazy.swiper-lazy-loaded + .swiper-lazy-preloader {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+@keyframes shimmer {
+  0% { background-position: 0 0; }
+  100% { background-position: -200% 0; }
 }
 /* 大数据管理系统 */
 #bigData {

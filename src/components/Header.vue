@@ -36,8 +36,9 @@
             <i class="underline"></i>
           </router-link>
           <dl v-if="item.children.length>0" class="children-dl">
-            <dt v-for="(i,n) in item.children" :key="n">
-              <router-link :to="i.path">{{i.name}}</router-link>
+            <dt v-for="(i,n) in item.children" :key="n" @click="onRoute(i.path)">
+              {{i.name}}
+              <!-- <router-link :to="i.path"></router-link> -->
             </dt>
           </dl>
         </li>
@@ -110,6 +111,10 @@ export default {
             {
               name: "SIVACON 8PT",
               path: "/productInfo/sivacon"
+            },
+            {
+              name: "BlokSET 5000",
+              path: "/productInfo/blokset5000"
             },
             {
               name: "MDmax",
@@ -197,6 +202,9 @@ export default {
       this.navIndex = index;
       sessionStorage.setItem('navIndex',index)
       this.menuName = name + '' + nameEn + '';
+    },
+    onRoute(path) {
+      this.$router.push(path)
     },
     menuClick() {
       if (this.menuClass == "glyphicon glyphicon-menu-down") {

@@ -43,6 +43,14 @@ export default new Router({
               }
             },
             {
+              path: '/productInfo/blokset5000',
+              name: 'blokset5000',
+              component: resolve => require(['@/view/productInfo/blokset5000'], resolve),
+              meta: {
+                title: 'BlockSET 5000'
+              }
+            },
+            {
               path: '/productInfo/mdmax',
               name: 'MDmax',
               component: resolve => require(['@/view/productInfo/mdmax'], resolve),
