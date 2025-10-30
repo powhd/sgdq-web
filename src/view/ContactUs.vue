@@ -119,7 +119,7 @@
         <h3 class="section-title">地图位置 Location Map</h3>
         <div class="map-container">
           <img :src="mapImgUrlPng" alt="高德静态地图" class="map-img" />
-        
+
         </div>
       </div>
 
@@ -273,7 +273,7 @@ export default {
 }
 
 .card-title {
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: 600;
   color: #1f2937;
   margin-bottom: 0.5rem;
@@ -287,7 +287,7 @@ export default {
 
 .card-desc-en {
   color: #6b7280;
-  font-size: 0.875rem;
+  font-size: 12px;
   line-height: 1.6;
 }
 

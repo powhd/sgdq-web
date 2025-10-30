@@ -27,7 +27,7 @@
           v-for="(item,index) in navList"
           :key="index"
           :class="index==navIndex?'active':''"
-          @click="navClick(index,item.name)"
+          @click="navClick(index,item.name, item.nameEn)"
         >
           <router-link :to="item.path">
             {{item.name}}
@@ -65,12 +65,14 @@
             v-for="(item,index) in navList"
             :key="index"
             :class="index==navIndex?'active':''"
-            @click="navClick(index,item.name)"
+            @click="navClick(index,item.name, item.nameEn)"
             data-toggle="collapse"
             data-target="#menu"
           >
             <router-link :to="item.path">
               {{item.name}}
+                          <span class="nav-subtitle">{{item.nameEn}}</span>
+
               <i class="underline"></i>
             </router-link>
           </li>
@@ -85,13 +87,19 @@ export default {
   data() {
     return {
       navIndex: sessionStorage.getItem('navIndex') ? sessionStorage.getItem('navIndex') : 0,
-      menuName: "首页",
+      menuName: "首页 Home",
       menuClass: "glyphicon glyphicon-menu-down",
       navList: [
         {
           name: "首页",
           nameEn: 'Home',
           path: "/",
+          children: []
+        },
+        {
+          name: "公司介绍",
+          nameEn: 'Company Introduction',
+          path: "/companyintroduction",
           children: []
         },
         {
@@ -170,12 +178,6 @@ export default {
         //   path: "/newsinformation",
         //   children: []
         // },
-        {
-          name: "公司介绍",
-          nameEn: 'Company Introduction',
-          path: "/companyintroduction",
-          children: []
-        },
         // {
         //   name: "工作机会",
         //   path: "/jobchance",
@@ -191,10 +193,10 @@ export default {
     };
   },
   methods: {
-    navClick(index, name) {
+    navClick(index, name,nameEn) {
       this.navIndex = index;
       sessionStorage.setItem('navIndex',index)
-      this.menuName = name;
+      this.menuName = name + '' + nameEn + '';
     },
     menuClick() {
       if (this.menuClass == "glyphicon glyphicon-menu-down") {
@@ -209,7 +211,7 @@ export default {
 <style scoped>
 /* 顶部 */
 #header {
-  background: #f4f4f4;
+  background: #fff;
   transition: all ease 0.6s;
 }
 #header .header-top {
@@ -401,7 +403,7 @@ export default {
     color: #fff;
     font-size: 15px;
     font-weight: bold;
-    padding: 15px 20px;
+    /* padding: 15px 20px; */
     position: relative;
     display: block;
   }

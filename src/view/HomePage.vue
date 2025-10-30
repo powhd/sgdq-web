@@ -148,12 +148,12 @@ export default {
           title: '您身边的IT专家1',
           content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
         },
-        {
-          img: require("@/assets/img/banner2.jpg"),
-          path: "",
-          title: '您身边的IT专家2',
-          content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
-        },
+        // {
+        //   img: require("@/assets/img/banner2.jpg"),
+        //   path: "",
+        //   title: '您身边的IT专家2',
+        //   content: '宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介宣传简介',
+        // },
         // {
         //   img: require("@/assets/img/banner3.jpg"),
         //   path: "",
