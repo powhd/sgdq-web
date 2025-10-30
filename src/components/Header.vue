@@ -31,8 +31,8 @@
         >
           <router-link :to="item.path">
             {{item.name}}
-            <span v-if="item.children.length>0" class="glyphicon glyphicon-menu-down"></span>
             <span class="nav-subtitle">{{item.nameEn}}</span>
+            <span v-if="item.children.length>0" class="glyphicon glyphicon-menu-down"></span>
             <i class="underline"></i>
           </router-link>
           <dl v-if="item.children.length>0" class="children-dl">
