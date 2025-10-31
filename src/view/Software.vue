@@ -23,6 +23,22 @@ export default {
         return{
             softwareList: [
                 {
+                    path: '/productInfo/kyn28a-24',
+                    name: 'KYN28A-24'
+                },{
+                    path: '/productInfo/kyn28a-12',
+                    name: 'KYN28A-12'
+                },{
+                    path: '/productInfo/xgn66-12',
+                    name: 'XGN66-12'
+                },{
+                    path: '/productInfo/hxgn15-12',
+                    name: 'HXGN15-12'
+                },{
+                    path: '/productInfo/ybw-12',
+                    name: 'YBW-12'
+                },
+                {
                     path: '/productInfo/sivacon',
                     name: 'SIVACON 8PT'
                 },{
@@ -40,21 +56,6 @@ export default {
                 },{
                     path: '/productInfo/ggd',
                     name: 'GGD'
-                },{
-                    path: '/productInfo/kyn28a-24',
-                    name: 'KYN28A-24'
-                },{
-                    path: '/productInfo/kyn28a-12',
-                    name: 'KYN28A-12'
-                },{
-                    path: '/productInfo/xgn66-12',
-                    name: 'XGN66-12'
-                },{
-                    path: '/productInfo/hxgn15-12',
-                    name: 'HXGN15-12'
-                },{
-                    path: '/productInfo/ybw-12',
-                    name: 'YBW-12'
                 },{
                     path: '/productInfo/gsm-i',
                     name: 'GSM-I'

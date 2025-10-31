@@ -109,6 +109,26 @@ export default {
           path: "/productInfo",
           children: [
             {
+              name: "KYN28A-24",
+              path: "/productInfo/kyn28a-24"
+            },
+            {
+              name: "KYN28A-12",
+              path: "/productInfo/kyn28a-12"
+            },
+            {
+              name: "XGN66-12",
+              path: "/productInfo/xgn66-12"
+            },
+            {
+              name: "HXGN15-12",
+              path: "/productInfo/hxgn15-12"
+            },
+            {
+              name: "YBW-12",
+              path: "/productInfo/ybw-12"
+            },
+            {
               name: "SIVACON 8PT",
               path: "/productInfo/sivacon"
             },
@@ -130,26 +150,6 @@ export default {
             {
               name: "GGD",
               path: "/productInfo/ggd"
-            },
-            {
-              name: "KYN28A-24",
-              path: "/productInfo/kyn28a-24"
-            },
-            {
-              name: "KYN28A-12",
-              path: "/productInfo/kyn28a-12"
-            },
-            {
-              name: "XGN66-12",
-              path: "/productInfo/xgn66-12"
-            },
-            {
-              name: "HXGN15-12",
-              path: "/productInfo/hxgn15-12"
-            },
-            {
-              name: "YBW-12",
-              path: "/productInfo/ybw-12"
             },
             {
               name: "GSM-I",
